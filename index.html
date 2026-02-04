@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Quiz Mission 🚀</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginBox" class="card">
+    <h2>🚀 Launch Your Web Quiz Mission</h2>
+    <p>🎯 Set your goal • ⏱️ Beat the clock • 🏆 Become a Web Champion</p>
+
+    <input type="text" id="username" placeholder="👤 Enter your name">
+    <input type="email" id="email" placeholder="📧 Enter your email">
+
+    <p id="loginError" class="error"></p>
+
+    <button onclick="startQuiz()">🚀 Start Mission</button>
+</div>
+
+<div id="quizBox" class="card" style="display:none;">
+    <h3>👋 Welcome, <span id="user"></span></h3>
+    <p>🎯 Goal: Answer correctly before time runs out!</p>
+
+    <div id="timer" class="timer">🚀 Countdown: 30s</div>
+
+    <p id="progressText"></p>
+    <h2 id="question"></h2>
+
+    <div class="options">
+        <button onclick="checkAnswer(0)"></button>
+        <button onclick="checkAnswer(1)"></button>
+        <button onclick="checkAnswer(2)"></button>
+        <button onclick="checkAnswer(3)"></button>
+    </div>
+
+    <p>🏆 Mission Score: <span id="score">0</span></p>
+</div>
+
+<div id="resultBox" class="card" style="display:none;">
+    <h2>🎉 Mission Completed!</h2>
+    <div id="finalScore"></div>
+    <div id="answerList"></div>
+</div>
+
+<audio id="beepSound">
+    <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
